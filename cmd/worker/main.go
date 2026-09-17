@@ -55,7 +55,7 @@ func delay(attempt int) time.Duration {
 }
 func main() {
 
-	PORT := ":" + os.Getenv("PORT_WORKER")
+	PORT := ":" + os.Getenv("PORT")
 
 	rc = connect()
 
