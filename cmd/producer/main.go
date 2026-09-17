@@ -65,7 +65,7 @@ func posthandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 
-	var PORT string = ":" + os.Getenv("PRODUCER_PORT")
+	var PORT string = ":" + os.Getenv("PORT")
 
 	client = connect()
 	http.HandleFunc("/add", posthandler)
