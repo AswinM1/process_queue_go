@@ -70,6 +70,10 @@ func main() {
 	}
 
 	http.HandleFunc("/metrics", metricsHandler)
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+
+		json.NewEncoder(w).Encode("yo bro whatssss up")
+	})
 
 	log.Println("Starting worker server on", PORT)
 
